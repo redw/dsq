@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AnimalResultNoticeSkin" width="640" height="113" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="animal_json.animal_bg_14_png" width="100%" height="100%" y="0" x="0" touchEnabled="false"/>
+	<e:Image id="imgResult" source="animal_2_json.animali_label_lose_1_png" x="124" y="10" touchEnabled="false"/>
+</e:Skin>

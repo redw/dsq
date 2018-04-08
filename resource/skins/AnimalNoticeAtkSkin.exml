@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AnimalNoticeAtkSkin" width="111" height="114" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="imgSelect" source="animal_bg_15_png" x="15" y="16" touchEnabled="false"/>
+	<e:Image id="imgRight" source="animal_bg_16_png" anchorOffsetX="20" anchorOffsetY="18" x="4" verticalCenter="0" touchEnabled="false"/>
+	<e:Image id="imgLeft" source="animal_bg_16_png" anchorOffsetX="20" anchorOffsetY="18" x="108" verticalCenter="0" rotation="180" touchEnabled="false"/>
+	<e:Image id="imgUp" source="animal_bg_16_png" y="108" anchorOffsetX="20" anchorOffsetY="18" rotation="-90" x="56" touchEnabled="false"/>
+	<e:Image id="imgDown" source="animal_bg_16_png" y="5" anchorOffsetX="20" anchorOffsetY="18" rotation="90" x="56" touchEnabled="false"/>
+</e:Skin>

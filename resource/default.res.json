@@ -1,0 +1,27 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,animal_2_json,animal_json",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "animal_2_json",
+			"type": "sheet",
+			"url": "assets/ui/animal_2.json",
+			"subkeys": "animali_bg_15_png,animali_bg_16_png,animali_bg_17_png,animali_bg_18_png,animali_bg_19_png,animali_bg_20_png,animali_label_1_png,animali_label_2_png,animali_label_3_png,animali_label_4_png,animali_label_5_png,animali_label_6_png,animali_label_lose_1_png,animali_label_lose_2_png,animali_label_lose_3_png,animali_label_lose_4_png,animali_label_win_1_png,animali_label_win_2_png,animali_label_win_3_png,animali_label_win_4_png,animali_label_xiangqing_png,animal_bg_20_png,animal_bg_21_png,spring_bg_28_png"
+		},
+		{
+			"name": "animal_json",
+			"type": "sheet",
+			"url": "assets/ui/animal.json",
+			"subkeys": "animali_bar_1_png,animali_bar_2_blue_png,animali_bar_2_red_png,animali_bar_3_png,animali_bar_4_png,animali_red_1_png,animali_red_10_png,animali_red_3_png,animali_red_4_png,animali_red_5_png,animali_red_6_png,animali_red_7_png,animal_1_png,animal_10_png,animal_10_smile_png,animal_1_smile_png,animal_3_png,animal_3_smile_png,animal_4_png,animal_4_smile_png,animal_5_png,animal_5_smile_png,animal_6_png,animal_6_smile_png,animal_7_png,animal_7_smile_png,animal_bg_10_png,animal_bg_11_png,animal_bg_12_png,animal_bg_13_png,animal_bg_14_png,animal_bg_15_png,animal_bg_16_png,animal_bg_18_png,animal_bg_19_png,animal_bg_2_png,animal_bg_22_png,animal_bg_23_png,animal_bg_24_png,animal_bg_25_png,animal_bg_26_png,animal_bg_27_png,animal_bg_3_png,animal_bg_4_png,animal_bg_6_png,animal_bg_7_png,animal_bg_9_png,animal_bule_1_png,animal_bule_10_png,animal_bule_3_png,animal_bule_4_png,animal_bule_5_png,animal_bule_6_png,animal_bule_7_png,spring_bg_29_png"
+		}
+	]
+}
