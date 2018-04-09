@@ -22,6 +22,7 @@ var Main = (function (_super) {
     }
     Main.prototype.addToStage = function () {
         Game.init(this.stage, {});
+        GameData.boot();
         Game.on(GameEvent.PREPARE_COMPLETE, this.startGame, this);
         Game.start();
     };

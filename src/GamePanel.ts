@@ -3,8 +3,9 @@ class GamePanel extends BasePanel {
     readonly sizeY = 8;
     private chessGroup:egret.DisplayObjectContainer;
 
-    private chessArr = [];
-    private chessData:any[] = [];
+    private chessArr:ChessItem[];
+
+    private curSide = 0;
 
     constructor() {
         super();
@@ -13,44 +14,56 @@ class GamePanel extends BasePanel {
     }
 
     init() {
-        let chessArr = [ChessEnum.elephant, ChessEnum.tiger, ChessEnum.tiger, ChessEnum.wolf, ChessEnum.wolf,ChessEnum.wolf,
-            ChessEnum.dog, ChessEnum.dog, ChessEnum.cat, ChessEnum.cat, ChessEnum.rat, ChessEnum.rat,
-            ChessEnum.rat, ChessEnum.rat, ChessEnum.bomb, ChessEnum.bomb];
-
-        let chessData = this.chessData;
-        chessData.length = 0;
-        for (let i = 0; i < 16; i++) {
-            let obj:any = {};
-            obj.value = chessArr[i];
-            obj.side = 1;
-            chessData.push(obj);
-
-            obj = {};
-            obj.value = chessArr[i];
-            obj.side = 2;
-            chessData.push(obj);
-        }
-        ArrayUtil.shuffle(chessData);
-        for (let i = 0, len = chessData.length; i < len; i++) {
-            let obj = chessData[i];
-            obj.index = i;
-            obj.row = ~~(i / 4);
-            obj.col = i % 4;
-        }
-
+        this.chessArr = [];
+        this.chessGroup.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchTap, this);
         this.createCheckerboard();
+    }
 
+    active() {
+        var side = GameData.chess.getSide();
+        this.turnSide(side);
+    }
+
+    public turnSide(side:number) {
+        if (this.curSide != side) {
+            this.curSide = side;
+            if (side == ChessSideEnum.self) {
+
+            } else {
+                ChessAI.analysis(GameData.chess.getChessBoard(),13, 13, ChessSideEnum.other);
+            }
+        }
+    }
+
+    private onTouchTap(e:egret.TouchEvent) {
+        if (this.curSide == ChessSideEnum.self) {
+            let card:ChessItem = e.target;
+            let index = card.index;
+            let value = GameData.chess.getChessValue(index);
+            if (!value) {
+                value = GameData.chess.getChessRealValue(index);
+                card.flop(value);
+            }
+        } else {
+            Notice.show("现在轮到对方");
+        }
     }
 
     // 创建棋盘
     private createCheckerboard() {
-        let chessData = this.chessData;
+        let chessData = GameData.chess.getChessBoard();
         for (let i = 0, len = chessData.length; i < len; i++) {
-            let obj = chessData[i];
-            let chess = new Chess();
-            chess.reset(obj);
+            let obj = Util.mixin(chessData[i], {});
+            let chess = new ChessItem();
+            chess.index = i;
+            let value = GameData.chess.getChessValue(i);
+            chess.reset({index:i, side:obj.side, value:value});
             this.chessArr.push(chess);
             this.chessGroup.addChild(chess);
         }
+    }
+
+    public destory() {
+
     }
 }

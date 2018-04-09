@@ -10,5 +10,5 @@ interface ILifeCycle{
 
     sleep();
 
-    dispose();
+    destory();
 }

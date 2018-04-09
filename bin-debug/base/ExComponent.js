@@ -117,7 +117,7 @@ var ExComponent = (function (_super) {
     /**
      * 释放
      */
-    ExComponent.prototype.dispose = function () {
+    ExComponent.prototype.destory = function () {
         this._data = null;
         this.sleep();
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.$onClick, this);

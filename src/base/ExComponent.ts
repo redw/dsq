@@ -121,7 +121,7 @@ class ExComponent extends eui.Component implements ILifeCycle {
     /**
      * 释放
      */
-    public dispose() {
+    public destory() {
         this._data = null;
         this.sleep();
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.$onClick, this);

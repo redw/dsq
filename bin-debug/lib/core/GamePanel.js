@@ -121,7 +121,7 @@ var HH;
                 var autoDispose = panel.autoDispose;
                 if (autoDispose) {
                     panel.removeFromStage();
-                    panel.dispose();
+                    panel.destory();
                     delete this._panelMap[name];
                 }
             }

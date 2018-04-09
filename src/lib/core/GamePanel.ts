@@ -128,7 +128,7 @@ module HH {
                 let autoDispose = panel.autoDispose;
                 if (autoDispose) {
                     panel.removeFromStage();
-                    panel.dispose();
+                    panel.destory();
                     delete this._panelMap[name];
                 }
             } else {

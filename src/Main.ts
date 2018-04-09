@@ -10,6 +10,8 @@ class Main extends egret.DisplayObject{
 
     private addToStage() {
         Game.init(this.stage, {});
+        GameData.boot();
+
         Game.on(GameEvent.PREPARE_COMPLETE, this.startGame, this);
         Game.start();
     }
