@@ -6,6 +6,9 @@ class ChessData {
     selfLastTime = 0;
     otherLastTime = 0;
 
+    private side = 0;
+    private chessboard:{open:number,value:number,side:number,index:number}[];
+
     constructor () {
         let data = ExternalUtil.getItem("chess_token");
         if (data) {
@@ -39,6 +42,14 @@ class ChessData {
         }
     }
 
+    setChessBoard(chessboard:{open:number,value:number,side:number,index:number}[]) {
+        this.chessboard = chessboard;
+    }
+
+    turnSide(side:number) {
+        this.side = side;
+    }
+
     // 得到棋盘的值 -1 空 0翻开
     getChessValue(index:number) {
         let chessboard = this._data.chessboard;
@@ -47,11 +58,12 @@ class ChessData {
     }
 
     // 翻开棋盘
-    openValue(index:number) {
+    openValue(index:number, value:number) {
         let chessboard = this._data.chessboard;
         let obj = chessboard[index];
         if (obj) {
             obj.open = 1;
+            obj.value = value;
         } else {
 
         }
@@ -74,13 +86,17 @@ class ChessData {
         ExternalUtil.setItem("chess_token", "");
     }
 
+    getChess(index:number) {
+        return this.chessboard[index];
+    }
+
     // 棋盘数据
     getChessBoard() {
-        return this._data.chessboard;
+        return this.chessboard;
     }
 
     // 当前谁出手
     getSide() {
-        return this._data.side;
+        return this.side;
     }
 }

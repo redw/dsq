@@ -20,7 +20,7 @@ class ChessItem extends ExComponent {
 
     }
 
-    reset(options:{index:number, side:number, value:number}) {
+    reset(options:{index:number, side:number, value:number,open:number}) {
         this.index = options.index;
         var row  = ~~(this.index / 4);
         var col = this.index % 4;

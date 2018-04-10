@@ -8,6 +8,7 @@ var ChessData = (function () {
     function ChessData() {
         this.selfLastTime = 0;
         this.otherLastTime = 0;
+        this.side = 0;
         var data = ExternalUtil.getItem("chess_token");
         if (data) {
             data = JSON.parse(data);
@@ -36,6 +37,12 @@ var ChessData = (function () {
             this._data = { side: side, selfHP: 13, otherHP: 13, lastTime: 0, chessboard: chessboard };
         }
     }
+    ChessData.prototype.setChessBoard = function (chessboard) {
+        this.chessboard = chessboard;
+    };
+    ChessData.prototype.turnSide = function (side) {
+        this.side = side;
+    };
     // 得到棋盘的值 -1 空 0翻开
     ChessData.prototype.getChessValue = function (index) {
         var chessboard = this._data.chessboard;
@@ -43,11 +50,12 @@ var ChessData = (function () {
         return Number(value);
     };
     // 翻开棋盘
-    ChessData.prototype.openValue = function (index) {
+    ChessData.prototype.openValue = function (index, value) {
         var chessboard = this._data.chessboard;
         var obj = chessboard[index];
         if (obj) {
             obj.open = 1;
+            obj.value = value;
         }
         else {
         }
@@ -66,13 +74,16 @@ var ChessData = (function () {
     ChessData.prototype.clearCache = function () {
         ExternalUtil.setItem("chess_token", "");
     };
+    ChessData.prototype.getChess = function (index) {
+        return this.chessboard[index];
+    };
     // 棋盘数据
     ChessData.prototype.getChessBoard = function () {
-        return this._data.chessboard;
+        return this.chessboard;
     };
     // 当前谁出手
     ChessData.prototype.getSide = function () {
-        return this._data.side;
+        return this.side;
     };
     return ChessData;
 }());
