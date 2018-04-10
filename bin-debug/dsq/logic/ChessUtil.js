@@ -46,7 +46,7 @@ var ChessUtil = (function () {
                 return false;
             }
         }
-        return attack <= attacked;
+        return attack >= attacked;
     };
     return ChessUtil;
 }());

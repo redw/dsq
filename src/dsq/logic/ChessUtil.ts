@@ -45,6 +45,6 @@ class ChessUtil {
             }
         }
 
-        return attack <= attacked;
+        return attack >= attacked;
     }
 }

@@ -29,16 +29,26 @@ class ChessAI {
                 if (chess.open) {
                     let checkCount = chess.value == ChessEnum.bomb ? 100 : 1;
                     for (let d = 0; d < dir.length; d++) {
+                        let count = 0;
                         for (let n = 1; n <= checkCount; n++) {
                             var newX = x + dir[d].x * n;
                             var newY = y + dir[d].y * n;
                             if (this.logic.inAreaByXY(newX, newY)) {
                                 let targetChess = this.logic.getChessByXY(newX, newY);
                                 if (targetChess) {
+                                    if (chess.value == ChessEnum.bomb) {
+                                        count++;
+                                    }
                                     if (targetChess.open &&
                                         chess.side != targetChess.side &&
                                         ChessUtil.canEat(chess.value, targetChess.value)) {
-                                        actions.push({type:"kill", data:{start:{x:x, y:y}, target:{x:newX, y:newY}}});
+                                        if (chess.value == ChessEnum.bomb) {
+                                            if (count == 2) {
+                                                actions.push({type:"kill", data:{start:{x:x, y:y}, target:{x:newX, y:newY}}});
+                                            }
+                                        } else {
+                                            actions.push({type:"kill", data:{start:{x:x, y:y}, target:{x:newX, y:newY}}});
+                                        }
                                     }
                                 } else {
                                     actions.push({type:"move", data:{start:{x:x, y:y}, target:{x:newX, y:newY}}});
