@@ -29,8 +29,7 @@ class ChessItem extends ExComponent {
         this.side = options.side;
 
         this.canFlop = true;
-        let {side, value} = options;
-        this.cardValue = GameData.chess.getChessValue(this.index);
+        var value  = this.getCardValue();
         if (value) {
             if (this.side == 1) {
                 this.typeImg.source = `animal_bule_${value}_png`;
@@ -48,9 +47,8 @@ class ChessItem extends ExComponent {
      */
     flop(value:number) {
         if (this.canFlop) {
-            this.cardValue = value;
             this.canFlop = false;
-            this.cardValue = value;
+            var value = this.getCardValue();
 
             if (this.side == 1) {
                 this.typeImg.source = `animal_bule_${value}_png`;
@@ -66,6 +64,7 @@ class ChessItem extends ExComponent {
 
     flopComplete() {
         this.canFlop = true;
+        this.dispatchEventWith("flop_complete", true);
     }
 
     show () {
@@ -73,7 +72,7 @@ class ChessItem extends ExComponent {
     }
 
     getCardValue() {
-
+        return GameData.chess.getChessValue(this.index);
     }
 }
 

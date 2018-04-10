@@ -45,12 +45,18 @@ var GamePanel = (function (_super) {
             var value = GameData.chess.getChessValue(index);
             if (!value) {
                 value = GameData.chess.getChessRealValue(index);
+                // 翻开
+                GameData.chess.openValue(index);
+                card.once("flop_complete", this.onFlopComplete, this);
                 card.flop(value);
             }
         }
         else {
             Notice.show("现在轮到对方");
         }
+    };
+    GamePanel.prototype.onFlopComplete = function () {
+        console.log("翻开完成");
     };
     // 创建棋盘
     GamePanel.prototype.createCheckerboard = function () {

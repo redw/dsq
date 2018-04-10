@@ -39,7 +39,25 @@ var ChessData = (function () {
     // 得到棋盘的值 -1 空 0翻开
     ChessData.prototype.getChessValue = function (index) {
         var chessboard = this._data.chessboard;
-        return chessboard[index] ? (open[index] ? open[index].value : 0) : -1;
+        var value = chessboard[index] ? (chessboard[index].open ? chessboard[index].value : 0) : -1;
+        return Number(value);
+    };
+    // 翻开棋盘
+    ChessData.prototype.openValue = function (index) {
+        var chessboard = this._data.chessboard;
+        var obj = chessboard[index];
+        if (obj) {
+            obj.open = 1;
+        }
+        else {
+        }
+    };
+    ChessData.prototype.setChessValue = function (index, value) {
+        var chessboard = this._data.chessboard;
+        var obj = chessboard[index];
+        if (obj) {
+            obj.value = value;
+        }
     };
     ChessData.prototype.getChessRealValue = function (index) {
         var chessboard = this._data.chessboard;

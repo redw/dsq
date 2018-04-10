@@ -30,7 +30,7 @@ class GamePanel extends BasePanel {
             if (side == ChessSideEnum.self) {
 
             } else {
-                ChessAI.analysis(GameData.chess.getChessBoard(),13, 13, ChessSideEnum.other);
+                let actionObj = ChessAI.analysis(GameData.chess.getChessBoard(),13, 13, ChessSideEnum.other);
             }
         }
     }
@@ -42,11 +42,18 @@ class GamePanel extends BasePanel {
             let value = GameData.chess.getChessValue(index);
             if (!value) {
                 value = GameData.chess.getChessRealValue(index);
+                // 翻开
+                GameData.chess.openValue(index);
+                card.once("flop_complete", this.onFlopComplete, this);
                 card.flop(value);
             }
-        } else {
-            Notice.show("现在轮到对方");
+        } else if (this.curSide == ChessSideEnum.machine) {
+
         }
+    }
+
+    private onFlopComplete() {
+        console.log("翻开完成");
     }
 
     // 创建棋盘

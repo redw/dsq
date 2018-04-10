@@ -42,7 +42,27 @@ class ChessData {
     // 得到棋盘的值 -1 空 0翻开
     getChessValue(index:number) {
         let chessboard = this._data.chessboard;
-        return chessboard[index] ? (open[index] ? open[index].value : 0) : -1;
+        let value =  chessboard[index] ? (chessboard[index].open ? chessboard[index].value : 0) : -1;
+        return Number(value);
+    }
+
+    // 翻开棋盘
+    openValue(index:number) {
+        let chessboard = this._data.chessboard;
+        let obj = chessboard[index];
+        if (obj) {
+            obj.open = 1;
+        } else {
+
+        }
+    }
+
+    setChessValue(index:number, value:number) {
+        let chessboard = this._data.chessboard;
+        let obj = chessboard[index];
+        if (obj) {
+            obj.value = value;
+        }
     }
 
     getChessRealValue(index:number) {

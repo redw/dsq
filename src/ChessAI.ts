@@ -34,7 +34,18 @@ class ChessAI {
         return attack <= attacked;
     }
 
-    public static analysis(chessArray:{value:number,side:number, index:number}[][], hp1:number, hp2:number, side = 1) {
+    public static analysis(chessArray:{value:number,side:number, index:number}[], hp1:number, hp2:number, side = 1) {
+        for (let i = 0, len = chessArray.length; i < len; i++) {
+            let row = ~~(i / 4);
+            let col = i % 4;
+            let chess = chessArray[i];
+            if (chess) {
+
+            } else {
+
+            }
+        }
+
         let row = chessArray.length;
         var col = chessArray[0].length;
         let actions:any[][] = [];
@@ -76,5 +87,34 @@ class ChessAI {
                 }
             }
         }
+
+        // 评估行为
+        let action:any;
+        if (!actions.length) {
+            let obj = ChessAI.flop(chessArray);
+            action = {};
+            action.type = "flop";
+        } else {
+            action = actions.shift();
+        }
+        return action;
+    }
+
+    public static flop(chessArray:{value:number,side:number, index:number}[]) {
+        let result = null;
+        while (true) {
+            let obj = ArrayUtil.getRandomItem(chessArray);
+            if (obj) {
+                if (!obj.open) {
+                    result = obj;
+                    break;
+                }
+            }
+        }
+        return result;
+    }
+
+    public static advanceFlop() {
+
     }
 }

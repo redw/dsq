@@ -30,8 +30,7 @@ var ChessItem = (function (_super) {
         this.y = row * 104;
         this.side = options.side;
         this.canFlop = true;
-        var side = options.side, value = options.value;
-        this.cardValue = GameData.chess.getChessValue(this.index);
+        var value = this.getCardValue();
         if (value) {
             if (this.side == 1) {
                 this.typeImg.source = "animal_bule_" + value + "_png";
@@ -49,9 +48,8 @@ var ChessItem = (function (_super) {
      */
     ChessItem.prototype.flop = function (value) {
         if (this.canFlop) {
-            this.cardValue = value;
             this.canFlop = false;
-            this.cardValue = value;
+            var value = this.getCardValue();
             if (this.side == 1) {
                 this.typeImg.source = "animal_bule_" + value + "_png";
             }
@@ -65,10 +63,12 @@ var ChessItem = (function (_super) {
     };
     ChessItem.prototype.flopComplete = function () {
         this.canFlop = true;
+        this.dispatchEventWith("flop_complete", true);
     };
     ChessItem.prototype.show = function () {
     };
     ChessItem.prototype.getCardValue = function () {
+        return GameData.chess.getChessValue(this.index);
     };
     return ChessItem;
 }(ExComponent));
