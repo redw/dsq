@@ -88,6 +88,9 @@ var ChessLogic = (function (_super) {
         if (action.type == "move") {
             this.move(action.data.start, action.data.target);
         }
+        else if (action.type == "kill") {
+            this.move(action.data.start, action.data.target);
+        }
         else if (action.type == "flop") {
             this.flop(action.data.index);
         }
@@ -128,7 +131,7 @@ var ChessLogic = (function (_super) {
                     else {
                         ArrayUtil.removeItem(this.otherRemainChessArr, targetObj.value);
                     }
-                    this.dispatchEventWith("eat_chess", false, [start, target]);
+                    this.dispatchEventWith("kill_chess", false, [start, target]);
                     this.turn(this.curSide == ChessSideEnum.self ? this.otherSide : ChessSideEnum.self);
                 }
             }
@@ -203,4 +206,3 @@ var ChessLogic = (function (_super) {
     return ChessLogic;
 }(egret.EventDispatcher));
 __reflect(ChessLogic.prototype, "ChessLogic");
-//# sourceMappingURL=ChessLogic.js.map

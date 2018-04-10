@@ -11,6 +11,11 @@ class ChessUtil {
         return index;
     }
 
+    public static getPoint(x:number, y:number) {
+        let point = {x:x * 108, y: y * 104};
+        return point;
+    }
+
     /**
      * 能否吃
      * @param attack

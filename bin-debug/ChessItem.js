@@ -26,13 +26,14 @@ var ChessItem = (function (_super) {
         this.index = options.index;
         var row = ~~(this.index / 4);
         var col = this.index % 4;
-        this.x = col * 108;
-        this.y = row * 104;
+        var point = ChessUtil.getPoint(col, row);
+        this.x = point.x;
+        this.y = point.y;
         this.side = options.side;
         this.canFlop = true;
         var value = this.getCardValue();
         if (value) {
-            if (this.side == 1) {
+            if (this.side == ChessSideEnum.self) {
                 this.typeImg.source = "animal_bule_" + value + "_png";
             }
             else {
@@ -46,11 +47,12 @@ var ChessItem = (function (_super) {
     /**
      * 翻牌
      */
-    ChessItem.prototype.flop = function (value) {
+    ChessItem.prototype.flop = function (cardObj) {
         if (this.canFlop) {
             this.canFlop = false;
-            var value = this.getCardValue();
-            if (this.side == 1) {
+            var value = cardObj.value;
+            var side = cardObj.side;
+            if (side == ChessSideEnum.self) {
                 this.typeImg.source = "animal_bule_" + value + "_png";
             }
             else {
@@ -69,6 +71,9 @@ var ChessItem = (function (_super) {
     };
     ChessItem.prototype.getCardValue = function () {
         return GameData.chess.getChessValue(this.index);
+    };
+    ChessItem.prototype.destory = function () {
+        DisplayUtil.removeFromParent(this);
     };
     return ChessItem;
 }(ExComponent));
@@ -92,4 +97,3 @@ var ChessSideEnum;
     ChessSideEnum[ChessSideEnum["other"] = 2] = "other";
     ChessSideEnum[ChessSideEnum["machine"] = 3] = "machine";
 })(ChessSideEnum || (ChessSideEnum = {}));
-//# sourceMappingURL=ChessItem.js.map

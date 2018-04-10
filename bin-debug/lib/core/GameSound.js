@@ -222,4 +222,3 @@ var HH;
     }(egret.EventDispatcher));
     __reflect(SoundComp.prototype, "SoundComp");
 })(HH || (HH = {}));
-//# sourceMappingURL=GameSound.js.map

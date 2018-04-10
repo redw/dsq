@@ -14,6 +14,10 @@ var ChessUtil = (function () {
         var index = y * 4 + x;
         return index;
     };
+    ChessUtil.getPoint = function (x, y) {
+        var point = { x: x * 108, y: y * 104 };
+        return point;
+    };
     /**
      * 能否吃
      * @param attack
@@ -47,4 +51,3 @@ var ChessUtil = (function () {
     return ChessUtil;
 }());
 __reflect(ChessUtil.prototype, "ChessUtil");
-//# sourceMappingURL=ChessUtil.js.map

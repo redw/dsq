@@ -55,18 +55,45 @@ var GamePanel = (function (_super) {
     };
     // 移动棋子
     GamePanel.prototype.onMoveChess = function (e) {
+        console.log("事件-移动");
+        var data = e.data;
+        var start = data[0];
+        var target = data[1];
+        var startIndex = ChessUtil.posToIndex(start.x, start.y);
+        var targetIndex = ChessUtil.posToIndex(target.x, target.y);
+        GameData.chess.moveChess(startIndex, targetIndex);
+        this.moveChess(startIndex, targetIndex);
     };
     // 吃棋子
     GamePanel.prototype.onKillChess = function (e) {
+        console.log("事件-吃棋子");
+        var data = e.data;
+        var start = data[0];
+        var target = data[1];
+        var startIndex = ChessUtil.posToIndex(start.x, start.y);
+        var targetIndex = ChessUtil.posToIndex(target.x, target.y);
+        this.moveChess(startIndex, targetIndex);
+        var targetChess = this.chessArr[targetIndex];
+        targetChess.destory();
+        GameData.chess.killChess(startIndex);
+    };
+    GamePanel.prototype.moveChess = function (startIndex, targetIndex) {
+        var startItem = this.chessArr[startIndex];
+        var pos = ChessUtil.indexToPos(targetIndex);
+        var point = ChessUtil.getPoint(pos.x, pos.y);
+        if (startItem) {
+            var tween = egret.Tween.get(startItem);
+            tween.to({ x: point.x, y: point.y }, 200);
+        }
     };
     // 翻棋子
     GamePanel.prototype.onFlopChess = function (e) {
         var data = e.data;
         var index = data.index;
         console.log("事件-翻牌");
-        GameData.chess.openValue(index, data.value);
+        GameData.chess.openValue(data);
         var chess = this.chessArr[index];
-        chess.flop(data.value);
+        chess.flop(data);
     };
     GamePanel.prototype.active = function () {
         var side = GameData.chess.getSide();
@@ -127,4 +154,3 @@ var GamePanel = (function (_super) {
     return GamePanel;
 }(BasePanel));
 __reflect(GamePanel.prototype, "GamePanel");
-//# sourceMappingURL=GamePanel.js.map

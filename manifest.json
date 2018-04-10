@@ -12,9 +12,9 @@
 	],
 	"game": [
 		"bin-debug/base/ExComponent.js",
+		"bin-debug/lib/core/Game.js",
 		"bin-debug/lib/core/ObjPool.js",
 		"bin-debug/base/BasePanel.js",
-		"bin-debug/lib/core/Game.js",
 		"bin-debug/lib/core/GamePrepare.js",
 		"bin-debug/base/Combobox.js",
 		"bin-debug/base/ExBone.js",

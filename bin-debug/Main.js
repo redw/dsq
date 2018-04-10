@@ -32,4 +32,3 @@ var Main = (function (_super) {
     return Main;
 }(egret.DisplayObject));
 __reflect(Main.prototype, "Main");
-//# sourceMappingURL=Main.js.map

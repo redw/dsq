@@ -40,6 +40,17 @@ var ChessData = (function () {
     ChessData.prototype.setChessBoard = function (chessboard) {
         this.chessboard = chessboard;
     };
+    ChessData.prototype.moveChess = function (startIndex, targetIndex) {
+        var startObj = this.chessboard[startIndex];
+        var targetObj = this.chessboard[targetIndex];
+        this.chessboard[targetIndex] = startObj;
+        this.chessboard[startIndex] = targetObj;
+    };
+    ChessData.prototype.killChess = function (index) {
+        if (this.chessboard[index]) {
+            this.chessboard[index] = null;
+        }
+    };
     ChessData.prototype.turnSide = function (side) {
         this.side = side;
     };
@@ -50,12 +61,14 @@ var ChessData = (function () {
         return Number(value);
     };
     // 翻开棋盘
-    ChessData.prototype.openValue = function (index, value) {
+    ChessData.prototype.openValue = function (cardObj) {
         var chessboard = this._data.chessboard;
+        var index = cardObj.index;
         var obj = chessboard[index];
         if (obj) {
             obj.open = 1;
-            obj.value = value;
+            obj.value = cardObj.value;
+            obj.side = cardObj.side;
         }
         else {
         }
@@ -88,4 +101,3 @@ var ChessData = (function () {
     return ChessData;
 }());
 __reflect(ChessData.prototype, "ChessData");
-//# sourceMappingURL=ChessData.js.map

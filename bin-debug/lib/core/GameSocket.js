@@ -118,4 +118,3 @@ var HH;
     HH.GameSocket = GameSocket;
     __reflect(GameSocket.prototype, "HH.GameSocket");
 })(HH || (HH = {}));
-//# sourceMappingURL=GameSocket.js.map

@@ -12,7 +12,9 @@ class ChessAI {
 
     calc() {
         let actions:{type:string, data:any}[] = this.getAllAction(this.chessboard);
-        return actions.shift();
+        let action = actions.shift();
+        console.log("翻牌行为:",action);
+        return action;
     }
 
     // 得到所有的动作
@@ -48,7 +50,7 @@ class ChessAI {
                         }
                     }
                 } else {
-                    actions.push({type:"flop", data:{index:ChessUtil.posToIndex(x, y)}});
+                    actions.push({type:"flop", data:{index:ChessUtil.posToIndex(x, y), side:chess.side, value:chess.value}});
                 }
             }
         }

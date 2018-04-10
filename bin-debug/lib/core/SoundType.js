@@ -9,4 +9,3 @@ var SoundType = (function () {
     return SoundType;
 }());
 __reflect(SoundType.prototype, "SoundType");
-//# sourceMappingURL=SoundType.js.map

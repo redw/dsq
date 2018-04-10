@@ -266,4 +266,3 @@ var Game;
     }
     Game.releaseArmature = releaseArmature;
 })(Game || (Game = {}));
-//# sourceMappingURL=Game.js.map

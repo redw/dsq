@@ -55,12 +55,38 @@ class GamePanel extends BasePanel {
 
     // 移动棋子
     private onMoveChess(e:egret.Event) {
-
+        console.log("事件-移动");
+        let data = e.data;
+        let start = data[0];
+        let target = data[1];
+        let startIndex = ChessUtil.posToIndex(start.x, start.y);
+        let targetIndex = ChessUtil.posToIndex(target.x, target.y);
+        GameData.chess.moveChess(startIndex, targetIndex);
+        this.moveChess(startIndex, targetIndex);
     }
 
     // 吃棋子
     private onKillChess(e:egret.Event) {
+        console.log("事件-吃棋子");
+        let data = e.data;
+        let start = data[0];
+        let target = data[1];
+        let startIndex = ChessUtil.posToIndex(start.x, start.y);
+        let targetIndex = ChessUtil.posToIndex(target.x, target.y);
+        this.moveChess(startIndex, targetIndex);
+        let targetChess:ChessItem = this.chessArr[targetIndex];
+        targetChess.destory();
+        GameData.chess.killChess(startIndex);
+    }
 
+    private moveChess(startIndex:number, targetIndex:number) {
+        let startItem = this.chessArr[startIndex];
+        let pos = ChessUtil.indexToPos(targetIndex);
+        let point = ChessUtil.getPoint(pos.x, pos.y);
+        if (startItem) {
+            let tween = egret.Tween.get(startItem);
+            tween.to({x:point.x, y:point.y}, 200);
+        }
     }
 
     // 翻棋子
@@ -68,9 +94,9 @@ class GamePanel extends BasePanel {
         let data = e.data;
         let index = data.index;
         console.log("事件-翻牌");
-        GameData.chess.openValue(index, data.value);
+        GameData.chess.openValue(data);
         let chess:ChessItem = this.chessArr[index];
-        chess.flop(data.value);
+        chess.flop(data);
     }
 
     active() {

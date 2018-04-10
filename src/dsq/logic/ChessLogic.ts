@@ -92,7 +92,10 @@ class ChessLogic extends egret.EventDispatcher {
         let action = this.ai.calc();
         if (action.type == "move") {
             this.move(action.data.start, action.data.target);
-        } else if (action.type == "flop") {
+        } else if (action.type == "kill") {
+            this.move(action.data.start, action.data.target);
+        }
+        else if (action.type == "flop") {
             this.flop(action.data.index);
         } else if (action.type == "surrender") {
 
@@ -130,7 +133,7 @@ class ChessLogic extends egret.EventDispatcher {
                     } else {
                         ArrayUtil.removeItem(this.otherRemainChessArr, targetObj.value);
                     }
-                    this.dispatchEventWith("eat_chess", false, [start, target]);
+                    this.dispatchEventWith("kill_chess", false, [start, target]);
 
                     this.turn(this.curSide == ChessSideEnum.self ? this.otherSide : ChessSideEnum.self);
                 }

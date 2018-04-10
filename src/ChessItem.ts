@@ -24,14 +24,15 @@ class ChessItem extends ExComponent {
         this.index = options.index;
         var row  = ~~(this.index / 4);
         var col = this.index % 4;
-        this.x = col * 108;
-        this.y = row * 104;
+        let point = ChessUtil.getPoint(col, row);
+        this.x = point.x;
+        this.y = point.y;
         this.side = options.side;
 
         this.canFlop = true;
         var value  = this.getCardValue();
         if (value) {
-            if (this.side == 1) {
+            if (this.side == ChessSideEnum.self) {
                 this.typeImg.source = `animal_bule_${value}_png`;
             } else {
                 this.typeImg.source = `animali_red_${value}_png`;
@@ -45,12 +46,12 @@ class ChessItem extends ExComponent {
     /**
      * 翻牌
      */
-    flop(value:number) {
+    flop(cardObj:any) {
         if (this.canFlop) {
             this.canFlop = false;
-            var value = this.getCardValue();
-
-            if (this.side == 1) {
+            var value = cardObj.value;
+            var side = cardObj.side;
+            if (side == ChessSideEnum.self) {
                 this.typeImg.source = `animal_bule_${value}_png`;
             } else {
                 this.typeImg.source = `animali_red_${value}_png`;
@@ -73,6 +74,10 @@ class ChessItem extends ExComponent {
 
     getCardValue() {
         return GameData.chess.getChessValue(this.index);
+    }
+
+    destory() {
+        DisplayUtil.removeFromParent(this);
     }
 }
 

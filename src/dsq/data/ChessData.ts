@@ -46,6 +46,19 @@ class ChessData {
         this.chessboard = chessboard;
     }
 
+    moveChess(startIndex:number, targetIndex:number) {
+        let startObj = this.chessboard[startIndex];
+        let targetObj = this.chessboard[targetIndex];
+        this.chessboard[targetIndex] = startObj;
+        this.chessboard[startIndex] = targetObj;
+    }
+
+    killChess(index:number) {
+        if (this.chessboard[index]) {
+            this.chessboard[index] = null;
+        }
+    }
+
     turnSide(side:number) {
         this.side = side;
     }
@@ -58,12 +71,14 @@ class ChessData {
     }
 
     // 翻开棋盘
-    openValue(index:number, value:number) {
+    openValue(cardObj:any) {
         let chessboard = this._data.chessboard;
+        let index = cardObj.index;
         let obj = chessboard[index];
         if (obj) {
             obj.open = 1;
-            obj.value = value;
+            obj.value = cardObj.value;
+            obj.side = cardObj.side;
         } else {
 
         }

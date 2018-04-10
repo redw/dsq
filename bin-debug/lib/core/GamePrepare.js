@@ -192,4 +192,3 @@ var GameEvent = (function () {
     return GameEvent;
 }());
 __reflect(GameEvent.prototype, "GameEvent");
-//# sourceMappingURL=GamePrepare.js.map

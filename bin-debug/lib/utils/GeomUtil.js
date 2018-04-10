@@ -216,4 +216,3 @@ var GeomUtil;
     }
     GeomUtil.isPointInQuad = isPointInQuad;
 })(GeomUtil || (GeomUtil = {}));
-//# sourceMappingURL=GeomUtil.js.map
