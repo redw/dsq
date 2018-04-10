@@ -44,7 +44,13 @@ var ChessData = (function () {
         var startObj = this.chessboard[startIndex];
         var targetObj = this.chessboard[targetIndex];
         this.chessboard[targetIndex] = startObj;
+        if (startObj) {
+            startObj.index = targetIndex;
+        }
         this.chessboard[startIndex] = targetObj;
+        if (targetObj) {
+            targetObj.index = startIndex;
+        }
     };
     ChessData.prototype.killChess = function (index) {
         if (this.chessboard[index]) {
@@ -101,3 +107,4 @@ var ChessData = (function () {
     return ChessData;
 }());
 __reflect(ChessData.prototype, "ChessData");
+//# sourceMappingURL=ChessData.js.map

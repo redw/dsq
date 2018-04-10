@@ -39,3 +39,4 @@ var ClipEff = (function () {
     return ClipEff;
 }());
 __reflect(ClipEff.prototype, "ClipEff");
+//# sourceMappingURL=ClipEff.js.map

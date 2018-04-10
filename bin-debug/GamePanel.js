@@ -83,7 +83,11 @@ var GamePanel = (function (_super) {
         var point = ChessUtil.getPoint(pos.x, pos.y);
         if (startItem) {
             var tween = egret.Tween.get(startItem);
+            console.log("move:", startItem.x, startItem.y, point.x, point.y);
             tween.to({ x: point.x, y: point.y }, 200);
+        }
+        else {
+            console.error("移动出错~~~");
         }
     };
     // 翻棋子
@@ -154,3 +158,4 @@ var GamePanel = (function (_super) {
     return GamePanel;
 }(BasePanel));
 __reflect(GamePanel.prototype, "GamePanel");
+//# sourceMappingURL=GamePanel.js.map

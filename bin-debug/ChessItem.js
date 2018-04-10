@@ -97,3 +97,4 @@ var ChessSideEnum;
     ChessSideEnum[ChessSideEnum["other"] = 2] = "other";
     ChessSideEnum[ChessSideEnum["machine"] = 3] = "machine";
 })(ChessSideEnum || (ChessSideEnum = {}));
+//# sourceMappingURL=ChessItem.js.map

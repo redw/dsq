@@ -79,7 +79,8 @@ var ChessLogic = (function (_super) {
         this.curSide = side;
         this.dispatchEventWith("turn_side", false, side);
         if (side == ChessSideEnum.machine) {
-            var waitTime = ArrayUtil.getRandomItem([2000, 3000, 4000]);
+            // let waitTime = ArrayUtil.getRandomItem([2000,3000,4000]);
+            var waitTime = 1000;
             egret.setTimeout(this.calc, this, waitTime);
         }
     };
@@ -124,6 +125,7 @@ var ChessLogic = (function (_super) {
                 }
                 else {
                     this.chessboard[targetIndex] = startObj;
+                    // startObj.index = targetIndex;
                     this.chessboard[startIndex] = null;
                     if (targetObj.side == ChessSideEnum.self) {
                         ArrayUtil.removeItem(this.selfRemainChessArr, targetObj.value);
@@ -131,7 +133,7 @@ var ChessLogic = (function (_super) {
                     else {
                         ArrayUtil.removeItem(this.otherRemainChessArr, targetObj.value);
                     }
-                    this.dispatchEventWith("kill_chess", false, [start, target]);
+                    this.dispatchEventWith("kill_chess", false, [Util.mixin(start, {}), Util.mixin(target, {})]);
                     this.turn(this.curSide == ChessSideEnum.self ? this.otherSide : ChessSideEnum.self);
                 }
             }
@@ -142,7 +144,8 @@ var ChessLogic = (function (_super) {
                 else {
                     this.chessboard[startIndex] = null;
                     this.chessboard[targetIndex] = startObj;
-                    this.dispatchEventWith("move_chess", false, [start, target]);
+                    // startObj.index = targetIndex;
+                    this.dispatchEventWith("move_chess", false, [Util.mixin(start, {}), Util.mixin(target, {})]);
                     this.turn(this.curSide == ChessSideEnum.self ? this.otherSide : ChessSideEnum.self);
                 }
             }
@@ -206,3 +209,4 @@ var ChessLogic = (function (_super) {
     return ChessLogic;
 }(egret.EventDispatcher));
 __reflect(ChessLogic.prototype, "ChessLogic");
+//# sourceMappingURL=ChessLogic.js.map

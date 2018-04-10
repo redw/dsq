@@ -28,3 +28,4 @@ var PanelEffect = (function () {
     return PanelEffect;
 }());
 __reflect(PanelEffect.prototype, "PanelEffect");
+//# sourceMappingURL=PanelEnum.js.map

@@ -85,7 +85,10 @@ class GamePanel extends BasePanel {
         let point = ChessUtil.getPoint(pos.x, pos.y);
         if (startItem) {
             let tween = egret.Tween.get(startItem);
+            console.log("move:", startItem.x, startItem.y, point.x, point.y);
             tween.to({x:point.x, y:point.y}, 200);
+        } else {
+            console.error("移动出错~~~");
         }
     }
 

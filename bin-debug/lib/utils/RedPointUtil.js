@@ -133,3 +133,4 @@ var RedPointUtil;
     }
     RedPointUtil.update = update;
 })(RedPointUtil || (RedPointUtil = {}));
+//# sourceMappingURL=RedPointUtil.js.map

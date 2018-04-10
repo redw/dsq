@@ -10,3 +10,4 @@ var Player = (function () {
     return Player;
 }());
 __reflect(Player.prototype, "Player");
+//# sourceMappingURL=Player.js.map

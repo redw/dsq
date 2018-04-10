@@ -75,3 +75,4 @@ var ShakeEff = (function (_super) {
     return ShakeEff;
 }(egret.EventDispatcher));
 __reflect(ShakeEff.prototype, "ShakeEff");
+//# sourceMappingURL=ShakeEff.js.map

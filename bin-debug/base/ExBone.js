@@ -140,3 +140,4 @@ var ExBone = (function (_super) {
     return ExBone;
 }(eui.Component));
 __reflect(ExBone.prototype, "ExBone");
+//# sourceMappingURL=ExBone.js.map

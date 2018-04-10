@@ -41,3 +41,4 @@ var TextUtil;
     }
     TextUtil.createBitmapText = createBitmapText;
 })(TextUtil || (TextUtil = {}));
+//# sourceMappingURL=TextUtil.js.map

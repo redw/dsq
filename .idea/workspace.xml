@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ChessLogic.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChessLogic.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dsq/logic/ChessLogic.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="98" column="34" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
+            <state relative-caret-position="587">
+              <caret line="146" selection-start-line="146" selection-end-line="147" />
             </state>
           </provider>
         </entry>
@@ -31,17 +31,8 @@
       <file leaf-file-name="GamePanel.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GamePanel.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="74" column="67" selection-start-line="74" selection-start-column="67" selection-end-line="74" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChessAI.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin-debug/dsq/logic/ChessAI.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="38" column="66" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="66" />
+            <state relative-caret-position="370">
+              <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -67,8 +58,8 @@
       <file leaf-file-name="ChessData.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dsq/data/ChessData.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="48" column="13" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="13" />
+            <state relative-caret-position="392">
+              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -91,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChessAI.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChessAI.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dsq/logic/ChessAI.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="38" column="72" lean-forward="true" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+            <state relative-caret-position="154">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -113,6 +104,7 @@
     <findStrings>
       <find>kill_chess</find>
       <find>翻牌行</find>
+      <find>move</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,13 +117,13 @@
         <option value="$PROJECT_DIR$/src/ChessAI.ts" />
         <option value="$PROJECT_DIR$/src/dsq/logic/MachinePlayer.ts" />
         <option value="$PROJECT_DIR$/src/dsq/logic/Player.ts" />
-        <option value="$PROJECT_DIR$/src/dsq/data/ChessData.ts" />
-        <option value="$PROJECT_DIR$/src/GamePanel.ts" />
         <option value="$PROJECT_DIR$/bin-debug/dsq/logic/ChessAI.js" />
-        <option value="$PROJECT_DIR$/src/dsq/logic/ChessLogic.ts" />
         <option value="$PROJECT_DIR$/src/ChessItem.ts" />
         <option value="$PROJECT_DIR$/src/dsq/logic/ChessUtil.ts" />
+        <option value="$PROJECT_DIR$/src/GamePanel.ts" />
+        <option value="$PROJECT_DIR$/src/dsq/data/ChessData.ts" />
         <option value="$PROJECT_DIR$/src/dsq/logic/ChessAI.ts" />
+        <option value="$PROJECT_DIR$/src/dsq/logic/ChessLogic.ts" />
       </list>
     </option>
   </component>
@@ -234,19 +226,19 @@
       <option name="presentableId" value="Default" />
       <updated>1523332130681</updated>
       <workItem from="1523332131970" duration="314000" />
-      <workItem from="1523338585439" duration="16385000" />
+      <workItem from="1523338585439" duration="19845000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16699000" />
+    <option name="totallyTimeSpent" value="20159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17758985" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
@@ -254,7 +246,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.36763006" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.077456646" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -364,31 +356,10 @@
     <entry file="file://$PROJECT_DIR$/src/dsq/data/GameData.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dsq/data/ChessData.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="48" column="13" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GamePanel.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="74" column="67" selection-start-line="74" selection-start-column="67" selection-end-line="74" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin-debug/dsq/logic/ChessAI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="38" column="66" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dsq/logic/ChessLogic.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="98" column="34" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
+        <state relative-caret-position="257">
+          <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -413,10 +384,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GamePanel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dsq/data/ChessData.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dsq/logic/ChessAI.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="38" column="72" lean-forward="true" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+        <state relative-caret-position="154">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dsq/logic/ChessLogic.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="146" selection-start-line="146" selection-end-line="147" />
         </state>
       </provider>
     </entry>

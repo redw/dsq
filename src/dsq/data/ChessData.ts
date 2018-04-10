@@ -50,7 +50,13 @@ class ChessData {
         let startObj = this.chessboard[startIndex];
         let targetObj = this.chessboard[targetIndex];
         this.chessboard[targetIndex] = startObj;
+        if (startObj) {
+            startObj.index = targetIndex;
+        }
         this.chessboard[startIndex] = targetObj;
+        if (targetObj) {
+            targetObj.index = startIndex;
+        }
     }
 
     killChess(index:number) {

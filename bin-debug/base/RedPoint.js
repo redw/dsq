@@ -65,3 +65,4 @@ var RedPoint = (function (_super) {
     return RedPoint;
 }(ExComponent));
 __reflect(RedPoint.prototype, "RedPoint");
+//# sourceMappingURL=RedPoint.js.map

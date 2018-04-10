@@ -51,3 +51,4 @@ var ChessUtil = (function () {
     return ChessUtil;
 }());
 __reflect(ChessUtil.prototype, "ChessUtil");
+//# sourceMappingURL=ChessUtil.js.map
