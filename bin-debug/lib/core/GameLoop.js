@@ -111,4 +111,3 @@ var HH;
     HH.GameLoop = GameLoop;
     __reflect(GameLoop.prototype, "HH.GameLoop");
 })(HH || (HH = {}));
-//# sourceMappingURL=GameLoop.js.map

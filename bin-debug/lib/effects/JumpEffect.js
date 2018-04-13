@@ -27,4 +27,3 @@ var JumpEffect = (function () {
     return JumpEffect;
 }());
 __reflect(JumpEffect.prototype, "JumpEffect");
-//# sourceMappingURL=JumpEffect.js.map

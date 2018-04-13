@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AnimalPanelSkin" width="640" height="1068" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image horizontalCenter="0" verticalCenter="0" source="animal_bg_20_png"/>
+	<e:Image source="animal_bg_13_png" y="13" horizontalCenter="0.5"/>
+	<e:Image id="imgSelect" x="60" y="149" width="517" height="916" source="animal_bg_24_png" scale9Grid="59,57,43,40"/>
+	<e:Image y="173" x="81" source="animal_bg_21_png"/>
+	
+	<e:Group id="chessGroup" width="432" height="830" x="101" y="189" anchorOffsetY="0" anchorOffsetX="0">
+	</e:Group>
+	
+	<e:BitmapLabel id="divTime" font="num_animal_time_fnt" text="0s" letterSpacing="-3" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="-407"/>
+	<e:Group id="endGroup" width="640" height="1067" y="0" x="0" touchEnabled="false">
+	</e:Group>
+	<e:Group id="blueGroup" width="235" height="70" x="27" y="92" anchorOffsetY="0" anchorOffsetX="0">
+		<!--<ns1:AnimalHead id="blueHead" x="2" skinName="AnimalHeadSkin" y="2"/>-->
+		<e:Label name="nameLbl" text="蓝方名字" x="75" y="5" size="20" bold="true" textColor="0x209efe" stroke="2"/>
+		<e:Image name="arrowImg" source="animal_bg_9_png" x="89" y="32"/>
+	</e:Group>
+	<e:Group id="redGroup" width="235" height="70" x="377" y="92" anchorOffsetY="0" anchorOffsetX="0" touchEnabled="false">
+		<!--<ns1:AnimalHead id="redHead" x="166" skinName="AnimalHeadSkin" y="2"/>-->
+		<e:Label name="nameLbl" text="电脑" y="5" size="20" bold="true" stroke="2" textColor="0xea5f60" right="78"/>
+		<e:Image name="arrowImg" x="145" y="32" source="animal_bg_11_png" scaleX="-1"/>
+	</e:Group>
+	<!--<ns1:SimpleButton x="639" y="798" anchorOffsetX="56" anchorOffsetY="28" source="animal_bg_6_png" name="btnTalk"/>-->
+	<e:Image id="imgAtked" source="mapevent_atked_png" width="100%" height="100%" horizontalCenter="0" verticalCenter="0" touchEnabled="false" alpha="0"/>
+</e:Skin>

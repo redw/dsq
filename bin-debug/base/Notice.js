@@ -51,4 +51,3 @@ var Notice = (function (_super) {
     return Notice;
 }(ExComponent));
 __reflect(Notice.prototype, "Notice");
-//# sourceMappingURL=Notice.js.map

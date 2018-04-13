@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AnimalNoticeSKin" width="640" height="80" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="animal_json.animal_bg_14_png" width="100%" height="100%" y="0" x="0" touchEnabled="false"/>
+	<e:Image id="imgTurnShow" scaleX="1" scaleY="1" source="animali_label_2_png" verticalCenter="0" horizontalCenter="0.5" touchEnabled="false"/>
+</e:Skin>

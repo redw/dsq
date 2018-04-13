@@ -27,9 +27,9 @@ var Main = (function (_super) {
         Game.start();
     };
     Main.prototype.startGame = function () {
+        Game.playMusic("bgm_huoguo_mp3");
         Game.openPanel(GamePanel);
     };
     return Main;
 }(egret.DisplayObject));
 __reflect(Main.prototype, "Main");
-//# sourceMappingURL=Main.js.map

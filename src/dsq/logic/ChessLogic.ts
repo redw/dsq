@@ -126,7 +126,6 @@ class ChessLogic extends egret.EventDispatcher {
                     console.error("不能吃");
                 } else {
                     this.chessboard[targetIndex] = startObj;
-                    startObj.index = targetIndex;
                     this.chessboard[startIndex] = null;
 
                     if (targetObj.side == ChessSideEnum.self) {
@@ -143,8 +142,8 @@ class ChessLogic extends egret.EventDispatcher {
                     console.error("不能移动");
                 } else {
                     this.chessboard[targetIndex] = startObj;
-                    startObj.index = targetIndex;
                     this.chessboard[startIndex] = null;
+
                     this.dispatchEventWith("move_chess", false, [Util.mixin(start, {}), Util.mixin(target, {})]);
                     this.turn(this.curSide == ChessSideEnum.self ? this.otherSide : ChessSideEnum.self);
                 }

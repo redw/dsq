@@ -12,9 +12,9 @@
 	],
 	"game": [
 		"bin-debug/base/ExComponent.js",
-		"bin-debug/lib/core/ObjPool.js",
 		"bin-debug/base/BasePanel.js",
 		"bin-debug/lib/core/Game.js",
+		"bin-debug/lib/core/ObjPool.js",
 		"bin-debug/lib/core/GamePrepare.js",
 		"bin-debug/base/Combobox.js",
 		"bin-debug/base/ExBone.js",
@@ -36,7 +36,7 @@
 		"bin-debug/lib/core/GameLoad.js",
 		"bin-debug/lib/core/GameLoop.js",
 		"bin-debug/lib/core/GamePanel.js",
-		"bin-debug/lib/utils/Util.js",
+		"bin-debug/Const.js",
 		"bin-debug/lib/core/GameSocket.js",
 		"bin-debug/lib/core/GameSound.js",
 		"bin-debug/lib/core/ILifeCycle.js",
@@ -61,6 +61,6 @@
 		"bin-debug/lib/utils/StringUtil.js",
 		"bin-debug/lib/utils/TextUtil.js",
 		"bin-debug/lib/utils/TimeUtil.js",
-		"bin-debug/Const.js"
+		"bin-debug/lib/utils/Util.js"
 	]
 }

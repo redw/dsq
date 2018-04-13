@@ -226,4 +226,3 @@ var HH;
     HH.GamePanel = GamePanel;
     __reflect(GamePanel.prototype, "HH.GamePanel");
 })(HH || (HH = {}));
-//# sourceMappingURL=GamePanel.js.map

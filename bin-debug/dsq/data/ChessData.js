@@ -107,4 +107,3 @@ var ChessData = (function () {
     return ChessData;
 }());
 __reflect(ChessData.prototype, "ChessData");
-//# sourceMappingURL=ChessData.js.map

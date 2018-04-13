@@ -209,4 +209,3 @@ var HH;
     HH.GameHttp = GameHttp;
     __reflect(GameHttp.prototype, "HH.GameHttp");
 })(HH || (HH = {}));
-//# sourceMappingURL=GameHttp.js.map

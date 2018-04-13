@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AnimalHpBarBlueSkin" width="32" height="291" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="imgLight" verticalCenter="0" horizontalCenter="0" source="animal_bg_22_png" alpha="0"/>
+	<e:Image x="0" y="0" source="animali_bar_1_png"/>
+	<e:Image id="thumb" scale9Grid="4,16,22,260" y="0" x="0" source="animali_bar_2_blue_png"/>
+	<e:Image id="imgShine" source="animali_bar_3_png" alpha="0" x="0" y="0"/>
+	<e:Image source="animali_bar_4_png" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>

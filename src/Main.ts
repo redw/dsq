@@ -17,6 +17,7 @@ class Main extends egret.DisplayObject{
     }
 
     private startGame() {
+        Game.playMusic("bgm_huoguo_mp3");
         Game.openPanel(GamePanel);
     }
 }

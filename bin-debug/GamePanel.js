@@ -158,4 +158,3 @@ var GamePanel = (function (_super) {
     return GamePanel;
 }(BasePanel));
 __reflect(GamePanel.prototype, "GamePanel");
-//# sourceMappingURL=GamePanel.js.map

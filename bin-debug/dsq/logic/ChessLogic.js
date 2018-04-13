@@ -125,7 +125,6 @@ var ChessLogic = (function (_super) {
                 }
                 else {
                     this.chessboard[targetIndex] = startObj;
-                    // startObj.index = targetIndex;
                     this.chessboard[startIndex] = null;
                     if (targetObj.side == ChessSideEnum.self) {
                         ArrayUtil.removeItem(this.selfRemainChessArr, targetObj.value);
@@ -142,9 +141,8 @@ var ChessLogic = (function (_super) {
                     console.error("不能移动");
                 }
                 else {
-                    this.chessboard[startIndex] = null;
                     this.chessboard[targetIndex] = startObj;
-                    // startObj.index = targetIndex;
+                    this.chessboard[startIndex] = null;
                     this.dispatchEventWith("move_chess", false, [Util.mixin(start, {}), Util.mixin(target, {})]);
                     this.turn(this.curSide == ChessSideEnum.self ? this.otherSide : ChessSideEnum.self);
                 }
@@ -209,4 +207,3 @@ var ChessLogic = (function (_super) {
     return ChessLogic;
 }(egret.EventDispatcher));
 __reflect(ChessLogic.prototype, "ChessLogic");
-//# sourceMappingURL=ChessLogic.js.map

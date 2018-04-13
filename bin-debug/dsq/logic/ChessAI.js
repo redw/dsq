@@ -17,8 +17,8 @@ var ChessAI = (function () {
         var actions = [];
         var dir = [{ x: 1, y: 0 }, { x: -1, y: 0 }, { x: 0, y: 1 }, { x: 0, y: -1 }];
         for (var i = 0, len = chessArray.length; i < len; i++) {
-            var y = ~~(i / 4);
             var x = i % 4;
+            var y = ~~(i / 4);
             var chess = chessArray[i];
             if (chess) {
                 if (chess.open) {
@@ -70,4 +70,3 @@ var ChessAI = (function () {
     return ChessAI;
 }());
 __reflect(ChessAI.prototype, "ChessAI");
-//# sourceMappingURL=ChessAI.js.map

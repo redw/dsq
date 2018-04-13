@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AnimalHeadSkin" width="67" height="66" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="imgLight" horizontalCenter="0" verticalCenter="0" source="animal_bg_23_png"/>
+	<e:Image id="headImg" source="robot_head_1_jpg" anchorOffsetX="0" width="54" anchorOffsetY="0" height="54" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image id="borderImg" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0" source="pvp_head_1_png"/>
+	<e:Image id="sexImg" width="24" y="-4" x="44" source="common_boy_png"/>
+</e:Skin>

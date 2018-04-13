@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,animal_2_json,animal_json",
+			"keys": "description_json,animal_2_json,animal_json,background_mp3,bgm_huoguo_mp3",
 			"name": "preload"
 		}
 	],
@@ -22,6 +22,16 @@
 			"type": "sheet",
 			"name": "animal_json",
 			"subkeys": "animal_10_png,animal_10_smile_png,animal_1_png,animal_1_smile_png,animal_3_png,animal_3_smile_png,animal_4_png,animal_4_smile_png,animal_5_png,animal_5_smile_png,animal_6_png,animal_6_smile_png,animal_7_png,animal_7_smile_png,animal_bg_10_png,animal_bg_11_png,animal_bg_12_png,animal_bg_13_png,animal_bg_14_png,animal_bg_15_png,animal_bg_16_png,animal_bg_18_png,animal_bg_19_png,animal_bg_22_png,animal_bg_23_png,animal_bg_24_png,animal_bg_25_png,animal_bg_26_png,animal_bg_27_png,animal_bg_2_png,animal_bg_3_png,animal_bg_4_png,animal_bg_6_png,animal_bg_7_png,animal_bg_9_png,animal_bule_10_png,animal_bule_1_png,animal_bule_3_png,animal_bule_4_png,animal_bule_5_png,animal_bule_6_png,animal_bule_7_png,animali_bar_1_png,animali_bar_2_blue_png,animali_bar_2_red_png,animali_bar_3_png,animali_bar_4_png,animali_red_10_png,animali_red_1_png,animali_red_3_png,animali_red_4_png,animali_red_5_png,animali_red_6_png,animali_red_7_png,spring_bg_29_png"
+		},
+		{
+			"name": "background_mp3",
+			"type": "sound",
+			"url": "background.mp3"
+		},
+		{
+			"name": "bgm_huoguo_mp3",
+			"type": "sound",
+			"url": "bgm_huoguo.mp3"
 		}
 	]
 }
